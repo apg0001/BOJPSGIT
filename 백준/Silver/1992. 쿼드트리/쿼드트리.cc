@@ -10,9 +10,9 @@ void divide(int y, int x, int N);
 
 int main()
 {
-    //ios::sync_with_stdio(false);
-    //cin.tie(NULL);
-    //cout.tie(NULL);
+    // ios::sync_with_stdio(false);
+    // cin.tie(NULL);
+    // cout.tie(NULL);
 
     int N;
     cin >> N;
@@ -28,7 +28,7 @@ int main()
     }
 
     divide(0, 0, N);
-    
+
     return 0;
 }
 
@@ -58,13 +58,13 @@ void divide(int y, int x, int N)
 {
     int state = check_color(y, x, N);
     if (state != -1)
-        cout<<state;
+        cout << state;
     else
     {
         int yy[] = {0, 0, 1, 1};
         int xx[] = {0, 1, 0, 1};
-        
-        cout<<"(";
+
+        cout << "(";
 
         for (int i = 0; i < 4; i++)
         {
@@ -73,7 +73,7 @@ void divide(int y, int x, int N)
 
             divide(ny, nx, N / 2);
         }
-        
-        cout<<")";
+
+        cout << ")";
     }
 }
